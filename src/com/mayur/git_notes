@@ -1,0 +1,207 @@
+GITHUB SETUP + UPLOAD NOTES
+
+1. Create/Open Project Folder
+Example:
+D:\OOPs-Java
+
+Open this folder in IntelliJ IDEA.
+
+--------------------------------------------------
+
+2. Initialize Git
+
+Command:
+git init
+
+Meaning:
+Starts Git in the current project folder.
+
+It creates a hidden folder:
+.git
+
+You only need to do this once for a project.
+
+--------------------------------------------------
+
+3. Connect Local Project to GitHub Repository
+
+Command:
+git remote add origin https://github.com/MayurThaware122/OOPS-Java.git
+
+Meaning:
+Connects the project on your computer to your GitHub repository.
+
+origin = nickname for the GitHub repository.
+
+--------------------------------------------------
+
+4. Check GitHub Connection
+
+Command:
+git remote -v
+
+Meaning:
+Shows which GitHub repository is connected.
+
+Example output:
+
+origin  https://github.com/MayurThaware122/OOPS-Java.git (fetch)
+origin  https://github.com/MayurThaware122/OOPS-Java.git (push)
+
+--------------------------------------------------
+
+5. Set Main Branch
+
+Command:
+git branch -M main
+
+Meaning:
+Names the main branch as "main".
+
+This is normally done only once.
+
+==================================================
+NORMAL WORKFLOW FOR UPLOADING CODE
+==================================================
+
+1. Check Changes
+
+Command:
+git status
+
+Meaning:
+Shows:
+- New files
+- Modified files
+- Deleted files
+- Files ready to commit
+
+--------------------------------------------------
+
+2. Add Changes
+
+Command:
+git add .
+
+Meaning:
+Adds all changed/new files to the staging area.
+
+"." means all files in the current project.
+
+--------------------------------------------------
+
+3. Check Again
+
+Command:
+git status
+
+Meaning:
+Confirms which files are ready to be committed.
+
+--------------------------------------------------
+
+4. Commit Changes
+
+Command:
+git commit -m "Add classes and objects"
+
+Meaning:
+Saves a version/snapshot of your code locally.
+
+-m = message
+
+Example messages:
+
+git commit -m "Add constructor concept"
+
+git commit -m "Add inheritance concept"
+
+git commit -m "Practice polymorphism"
+
+--------------------------------------------------
+
+5. Push to GitHub
+
+Command:
+git push origin main
+
+Meaning:
+Uploads your committed code to GitHub.
+
+origin = GitHub repository
+main = main branch
+
+==================================================
+EASY ORDER TO REMEMBER
+==================================================
+
+git status
+     ↓
+git add .
+     ↓
+git status
+     ↓
+git commit -m "message"
+     ↓
+git push origin main
+
+SHORT FORM:
+
+STATUS
+ADD
+COMMIT
+PUSH
+
+--------------------------------------------------
+
+IMPORTANT:
+
+git add .
+= prepares files
+
+git commit -m "message"
+= saves changes locally
+
+git push origin main
+= actually uploads changes to GitHub
+
+--------------------------------------------------
+
+ONE-TIME SETUP COMMANDS:
+
+git init
+git remote add origin https://github.com/MayurThaware122/OOPS-Java.git
+git branch -M main
+git remote -v
+
+--------------------------------------------------
+
+COMMANDS USED REGULARLY:
+
+git status
+git add .
+git status
+git commit -m "your message"
+git push origin main
+
+now if you want to download the git folder
+git clone https://github.com/MayurThaware122/OOPS-Java.git
+
+if you want to download the file the command is
+1) for cmd
+curl.exe -O "https://raw.githubusercontent.com/MayurThaware122/OOPS-Java/main/src/classes_objects/Main.java"
+
+2) for powershell
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/MayurThaware122/OOPS-Java/main/src/classes_objects/Main.java" -OutFile "Main.java"
+
+***
+For curl.exe, if you want to give the downloaded file a custom name, use lowercase -o:
+curl.exe -o MyFile.java "https://raw.githubusercontent.com/MayurThaware122/OOPS-Java/main/src/classes_objects/Main.java"
+
+Difference:
+-O  = keep original filename from URL
+-o  = give your own filename
+
+For git clone, if you want a custom folder name:
+git clone https://github.com/MayurThaware122/OOPS-Java.git MyFolder
+git clone https://github.com/MayurThaware122/OOPS-Java.git Java-OOP-Practice
